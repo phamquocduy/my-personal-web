@@ -24,7 +24,7 @@ const TypedJobDesc = () => {
     };
   }, []);
 
-  return <span className="text-lg font-bold text-indigo-600" ref={el} />;
+  return <span className="text-lg font-bold text-violet-600" ref={el} />;
 };
 
 export default TypedJobDesc;
