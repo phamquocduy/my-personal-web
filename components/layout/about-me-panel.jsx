@@ -26,11 +26,11 @@ const myServices = [
 
 const AboutMe = () => {
   return (
-    <div className="pb-16 bg-white overflow-hidden lg:pb-24">
-      <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+    <div className="overflow-hidden bg-gray-100 pb-16 lg:pb-24">
+      <div className="relative mx-auto max-w-xl px-4 pt-12 sm:px-6 lg:max-w-7xl lg:px-8">
         {/* Desktop - dots on right top */}
         <svg
-          className="hidden lg:block absolute left-full transform -translate-x-1/2"
+          className="absolute left-full hidden -translate-x-1/2 transform lg:block"
           width={404}
           height={784}
           fill="none"
@@ -53,32 +53,28 @@ const AboutMe = () => {
         </svg>
 
         <div className="relative">
-          <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
             Nice to meet you.
           </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in,
-            accusamus quisquam.
+          <p className="mx-auto mt-4 max-w-3xl text-center text-xl text-gray-500">
+            I don&apos;t like to define myself by the work I&apos;ve done. I define myself by the work I want to do. Any
+            skills can be taught, personality is inherent. I prefer to keep learning, continue challenging myself, do
+            interesting things that matter, and I love what I do.
           </p>
         </div>
 
-        <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+        <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
           <div className="relative">
-            <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">My Services</h3>
-            <p className="mt-3 text-lg text-gray-500">
-              I don&apos;t like to define myself by the work I&apos;ve done. I define myself by the work I want to do.
-              Any skills can be taught, personality is inherent. I prefer to keep learning, continue challenging myself,
-              do interesting things that matter, and I love what I do.
-            </p>
+            <h3 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">My Services</h3>
 
             <dl className="mt-10 space-y-10">
               {myServices.map((item) => (
                 <div key={item.id} className="relative">
                   <dt>
-                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-violet-500 text-white">
+                    <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-violet-500 text-white">
                       <item.icon className="h-6 w-6" aria-hidden="true" />
                     </div>
-                    <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{item.name}</p>
+                    <p className="ml-16 text-lg font-medium leading-6 text-gray-900">{item.name}</p>
                   </dt>
                   <dd className="mt-2 ml-16 text-base text-gray-500">{item.description}</dd>
                 </div>
@@ -86,10 +82,10 @@ const AboutMe = () => {
             </dl>
           </div>
 
-          <div className="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
+          <div className="relative -mx-4 mt-10 lg:mt-0" aria-hidden="true">
             {/* Mobile - dots on bottom */}
             <svg
-              className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
+              className="absolute left-1/2 -translate-x-1/2 translate-y-16 transform lg:hidden"
               width={784}
               height={404}
               fill="none"

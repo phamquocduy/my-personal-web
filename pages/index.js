@@ -1,18 +1,23 @@
-import dynamic from "next/dynamic";
-
 import Navigation from "../components/layout/navigation";
+
 import HeroSection from "../components/layout/hero-section";
 import AboutMe from "../components/layout/about-me-panel";
-// make sure that the SkillsChart component is only loaded in the browser
-const SkillsChart = dynamic(() => import("../components/layout/skills-chart"), { ssr: false });
+import Resume from "../components/layout/resume";
+import ContactMe from "../components/layout/contact-me";
+
+import Footer from "../components/layout/footer";
 
 export default function Home() {
   return (
     <div className="bg-white">
       <Navigation />
+
       <HeroSection />
       <AboutMe />
-      <SkillsChart />
+      <Resume />
+      <ContactMe />
+
+      <Footer />
     </div>
   );
 }
