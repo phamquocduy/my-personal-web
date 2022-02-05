@@ -3,11 +3,10 @@ const ContactMe = () => {
     <div className="bg-gray-100">
       <div className="mx-auto max-w-7xl py-12 px-4 sm:py-24 sm:px-6 lg:px-8">
         <div className="relative bg-white shadow-xl">
-          <h2 className="sr-only">Contact us</h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3">
-            {/* Contact information */}
-            <div className="relative overflow-hidden bg-violet-700 py-10 px-6 sm:px-10 xl:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            {/* Contact Me section */}
+            <div className="relative overflow-hidden bg-violet-600 py-10 px-6 sm:px-10 xl:p-12">
+              {/* Shape */}
               <div className="pointer-events-none absolute inset-0 sm:hidden" aria-hidden="true">
                 <svg
                   className="absolute inset-0 h-full w-full"
@@ -104,45 +103,34 @@ const ContactMe = () => {
                   </defs>
                 </svg>
               </div>
-              <h3 className="text-lg font-medium text-white">Contact information</h3>
+
+              {/* text */}
+              <h3 className="text-lg font-medium text-white">Contact me</h3>
               <p className="mt-6 max-w-3xl text-base text-violet-50">
-                Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor
-                lacus arcu.
+                I’m interested in freelance opportunities – especially ambitious or large projects. However, if you have
+                other request or question, don’t hesitate to use the form.
               </p>
             </div>
 
             {/* Contact form */}
-            <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-              <h3 className="text-lg font-medium text-gray-900">Send us a message</h3>
+            <div className="py-10 px-6 sm:px-10 lg:col-span-1 xl:p-12">
+              <h3 className="text-lg font-medium text-gray-900">Send me a message</h3>
               <form action="#" method="POST" className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-                <div>
-                  <label htmlFor="first-name" className="block text-sm font-medium text-gray-900">
-                    First name
+                <div className="col-span-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-900">
+                    Your name
                   </label>
                   <div className="mt-1">
                     <input
                       type="text"
-                      name="first-name"
-                      id="first-name"
+                      name="name"
+                      id="name"
                       autoComplete="given-name"
                       className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-violet-500 focus:ring-violet-500"
                     />
                   </div>
                 </div>
-                <div>
-                  <label htmlFor="last-name" className="block text-sm font-medium text-gray-900">
-                    Last name
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      type="text"
-                      name="last-name"
-                      id="last-name"
-                      autoComplete="family-name"
-                      className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-violet-500 focus:ring-violet-500"
-                    />
-                  </div>
-                </div>
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-900">
                     Email
@@ -153,16 +141,18 @@ const ContactMe = () => {
                       name="email"
                       type="email"
                       autoComplete="email"
-                      className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-violet-500 focus:ring-violet-500"
+                      placeholder="you@email.com"
+                      className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:border-violet-500 focus:ring-violet-500"
                     />
                   </div>
                 </div>
+
                 <div>
                   <div className="flex justify-between">
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-900">
                       Phone
                     </label>
-                    <span id="phone-optional" className="text-sm text-gray-500">
+                    <span id="phone-optional" className="text-sm text-gray-400">
                       Optional
                     </span>
                   </div>
@@ -177,6 +167,7 @@ const ContactMe = () => {
                     />
                   </div>
                 </div>
+
                 <div className="sm:col-span-2">
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-900">
                     Subject
@@ -195,7 +186,7 @@ const ContactMe = () => {
                     <label htmlFor="message" className="block text-sm font-medium text-gray-900">
                       Message
                     </label>
-                    <span id="message-max" className="text-sm text-gray-500">
+                    <span id="message-max" className="text-sm text-gray-400">
                       Max. 500 characters
                     </span>
                   </div>

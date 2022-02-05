@@ -1,13 +1,9 @@
-import cls from "classnames";
-import { Fragment } from "react";
-import { ChatAltIcon, TagIcon, UserCircleIcon } from "@heroicons/react/solid";
-
 const timeline = [
   {
     id: 1,
     role: "React Developer",
     workplace: "Unicorn Systems | Pilsen",
-    date: "2017 - 2020",
+    date: "2016 - 2021",
     comment:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. ",
   },
@@ -15,7 +11,7 @@ const timeline = [
     id: 2,
     role: "React Developer",
     workplace: "Unicorn Systems | Pilsen",
-    date: "2017 - 2020",
+    date: "2016 - 2021",
     comment:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. ",
   },
@@ -23,7 +19,7 @@ const timeline = [
     id: 3,
     role: "React Developer",
     workplace: "Unicorn Systems | Pilsen",
-    date: "2017 - 2020",
+    date: "2016 - 2021",
     comment:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. ",
   },
@@ -31,7 +27,7 @@ const timeline = [
     id: 4,
     role: "React Developer",
     workplace: "Unicorn Systems | Pilsen",
-    date: "2017 - 2020",
+    date: "2016 - 2021",
     comment:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. ",
   },
@@ -73,7 +69,7 @@ const Resume = () => {
                     ) : null}
                   </div>
 
-                  <div className="relative h-4 w-4 rounded-full bg-white px-2 ring-4 ring-violet-700"></div>
+                  <div className="relative h-4 w-4 rounded-full bg-white px-2 ring-4 ring-violet-700" />
 
                   <div className="-mt-1.5 ml-4 w-1/2 text-left">
                     {isEven ? null : (

@@ -17,7 +17,7 @@ const myServices = [
   },
   {
     id: 3,
-    name: "C# development",
+    name: "Solution Consulting",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
     icon: LightningBoltIcon,
@@ -57,9 +57,8 @@ const AboutMe = () => {
             Nice to meet you.
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-xl text-gray-500">
-            I don&apos;t like to define myself by the work I&apos;ve done. I define myself by the work I want to do. Any
-            skills can be taught, personality is inherent. I prefer to keep learning, continue challenging myself, do
-            interesting things that matter, and I love what I do.
+            User experience, beautiful pixels and writing clean, accessible, human code matters to me. I prefer to keep
+            learning, continue challenging myself, do interesting things that matter, and I love what I do.
           </p>
         </div>
 

@@ -9,8 +9,9 @@ const TypedJobDesc = () => {
 
   useEffect(() => {
     const options = {
-      strings: ["Web", "React", "C#"],
+      strings: ["Front-end developer", "React coder", "Gamer 🎮"],
       typeSpeed: 100,
+      backDelay: 2000,
       backSpeed: 100,
       loop: true,
     };
