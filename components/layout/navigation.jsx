@@ -1,5 +1,5 @@
 import cls from "classnames";
-import Image from "next/image";
+import { Link as ScrollLink } from "react-scroll";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
@@ -16,30 +16,29 @@ import Button from "../bricks/button";
 
 const projects = [
   {
-    name: "Inbox",
-    description: "Get a better understanding of where your traffic is coming from.",
+    name: "App 1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores fuga?",
     href: "#",
     icon: InboxIcon,
   },
   {
-    name: "Messaging",
-    description: "Speak directly to your customers in a more meaningful way.",
+    name: "App 2",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores fuga?",
     href: "#",
     icon: AnnotationIcon,
   },
-  { name: "Live Chat", description: "Your customers' data will be safe and secure.", href: "#", icon: ChatAlt2Icon },
   {
-    name: "Knowledge Base",
-    description: "Connect with third-party tools that you're already using.",
+    name: "App 3",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores fuga?",
+    href: "#",
+    icon: ChatAlt2Icon,
+  },
+  {
+    name: "App 4",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores fuga?",
     href: "#",
     icon: QuestionMarkCircleIcon,
   },
-];
-
-const navigation = [
-  { name: "Welcome", href: "#", active: true },
-  { name: "About", href: "#", active: false },
-  // TODO
 ];
 
 const Navigation = () => {
@@ -50,9 +49,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
-              <div className="relative h-12 w-36">
-                <Image src="/images/vercel.svg" layout="fill" objectFit="contain" alt="" />
-              </div>
+              <img src="/favicon/main-logo.png" className="relative h-24 w-auto" alt="logo" />
             </a>
           </div>
 
@@ -65,12 +62,6 @@ const Navigation = () => {
 
           {/* Navigation */}
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-            {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-base font-medium text-gray-500 hover:text-black">
-                {item.name}
-              </a>
-            ))}
-
             <Popover className="relative">
               {({ open }) => (
                 <>
@@ -126,9 +117,10 @@ const Navigation = () => {
             </Popover>
           </Popover.Group>
 
-          {/* Button - Download my CV */}
-          <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <Button>Download my CV</Button>
+          <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0 lg:pr-12">
+            <ScrollLink to="my-resume" smooth={true} duration={500}>
+              <Button>See my Resume</Button>
+            </ScrollLink>
           </div>
         </div>
 
@@ -146,29 +138,13 @@ const Navigation = () => {
             <div className="divide-y-2 divide-gray-100 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="px-5 py-5">
                 <div className="flex items-center justify-between">
-                  <div>
-                    <img className="h-8 w-auto" src="/images/vercel.svg" alt="logo" />
-                  </div>
+                  <img src="/favicon/main-logo.png" className="relative h-24 w-auto" alt="logo" />
+
                   <div className="-mr-2">
                     <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-500">
-                      <span className="sr-only">Close menu</span>
                       <XIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
                   </div>
-                </div>
-              </div>
-
-              <div className="px-2 py-2">
-                <div className="flex flex-col justify-center">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex h-12 items-center rounded-lg px-3 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-700"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
                 </div>
               </div>
 
@@ -191,9 +167,11 @@ const Navigation = () => {
               </div>
 
               <div className="px-5 py-2">
-                <button className="flex w-full items-center justify-center rounded-md border border-transparent bg-violet-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-violet-700">
-                  Download my CV
-                </button>
+                <ScrollLink to="my-resume" smooth={true} duration={500}>
+                  <button className="flex w-full items-center justify-center rounded-md border border-transparent bg-violet-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-violet-700">
+                    See my Resume
+                  </button>
+                </ScrollLink>
               </div>
             </div>
           </Popover.Panel>

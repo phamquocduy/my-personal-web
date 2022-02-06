@@ -5,6 +5,11 @@ module.exports = {
       fontFamily: {
         sans: ["Inter"],
       },
+      colors: {
+        violet: {
+          600: "#9738fc",
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/forms", "@tailwindcss/aspect-ratio")],

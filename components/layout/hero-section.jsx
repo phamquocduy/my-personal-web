@@ -1,3 +1,4 @@
+import { Link as ScrollLink } from "react-scroll";
 import { MailIcon } from "@heroicons/react/solid";
 
 import Button from "../bricks/button";
@@ -15,18 +16,23 @@ const HeroSection = () => {
             <div className="mt-6 sm:max-w-xl">
               <h1 className="text-4xl font-extrabold text-black sm:text-5xl">Phạm Quốc Duy</h1>
               <p className="mt-2 text-xl text-gray-500">
-                or you can call me <span className="text-black">Martin 👋</span>
+                or you can call me <span className="font-extrabold text-black">Martin 👋</span>
               </p>
               <p className="mt-6 text-xl text-gray-500">
-                I would like to take the image of myself as being a passionate <TypedJobDesc /> Developer
+                I would like to take the image of myself as being a passionate <TypedJobDesc />
+              </p>
+              <p className="mt-6 text-xl text-gray-500">
+                I’m happiest when I’m creating, learning, exploring and thinking about how to make things better.
               </p>
             </div>
 
             <div className="mt-6">
-              <Button>
-                <MailIcon className="-ml-1 mr-3 h-5 w-5" aria-hidden="true" />
-                Contact me
-              </Button>
+              <ScrollLink to="contact-section" smooth={true} duration={500}>
+                <Button>
+                  <MailIcon className="-ml-1 mr-3 h-5 w-5" aria-hidden="true" />
+                  Contact me
+                </Button>
+              </ScrollLink>
             </div>
           </div>
         </div>
