@@ -58,7 +58,7 @@ const AboutMe = () => {
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-xl text-gray-500">
             User experience, beautiful pixels and writing clean, accessible, human code matters to me. I prefer to keep
-            learning, continue challenging myself, do interesting things that matter, and I love what I do.
+            learning, continue challenging myself, do interesting things. And I love what I do.
           </p>
         </div>
 
@@ -70,7 +70,7 @@ const AboutMe = () => {
               {myServices.map((item) => (
                 <div key={item.id} className="relative">
                   <dt>
-                    <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-violet-500 text-white">
+                    <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-violet-600 text-white">
                       <item.icon className="h-6 w-6" aria-hidden="true" />
                     </div>
                     <p className="ml-16 text-lg font-medium leading-6 text-gray-900">{item.name}</p>

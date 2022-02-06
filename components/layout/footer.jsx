@@ -1,7 +1,7 @@
 const navigation = [
   {
     name: "GitHub",
-    href: "#",
+    href: "https://github.com/phamquocduy",
     icon: (props) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
@@ -36,7 +36,13 @@ const Footer = () => {
         <div className="mt-2 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-400 hover:text-gray-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
             ))}

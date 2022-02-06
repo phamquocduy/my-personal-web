@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Element } from "react-scroll";
 
 import Navigation from "../components/layout/navigation";
 
@@ -23,13 +24,26 @@ export default function Home() {
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </Head>
 
+      {/* navigation menu */}
       <Navigation />
 
+      {/* hero section */}
       <HeroSection />
-      <AboutMe />
-      <Resume />
-      <ContactMe />
 
+      {/* my services */}
+      <AboutMe />
+
+      {/* my resume */}
+      <Element name="my-resume">
+        <Resume />
+      </Element>
+
+      {/* contact me */}
+      <Element name="contact-section">
+        <ContactMe />
+      </Element>
+
+      {/* footer */}
       <Footer />
     </div>
   );

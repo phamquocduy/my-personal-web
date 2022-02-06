@@ -53,7 +53,7 @@ const Resume = () => {
           return (
             <li key={item.id}>
               <div className="relative py-4">
-                <span className="absolute top-5 left-1/2 -ml-px h-full w-0.5 bg-violet-200" aria-hidden="true" />
+                <span className="absolute top-5 left-1/2 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
 
                 <div className="relative flex items-start justify-center">
                   <div className="-mt-1.5 mr-4 w-1/2 text-right">
@@ -69,7 +69,7 @@ const Resume = () => {
                     ) : null}
                   </div>
 
-                  <div className="relative h-4 w-4 rounded-full bg-white px-2 ring-4 ring-violet-700" />
+                  <div className="relative h-4 w-4 rounded-full bg-white px-2 ring-4 ring-violet-600" />
 
                   <div className="-mt-1.5 ml-4 w-1/2 text-left">
                     {isEven ? null : (

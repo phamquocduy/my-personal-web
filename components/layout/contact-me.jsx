@@ -1,3 +1,5 @@
+import MapWrapper from "../bricks/map-wrapper";
+
 const ContactMe = () => {
   return (
     <div className="bg-gray-100">
@@ -110,6 +112,10 @@ const ContactMe = () => {
                 I’m interested in freelance opportunities – especially ambitious or large projects. However, if you have
                 other request or question, don’t hesitate to use the form.
               </p>
+
+              <div className="w-full h-fit mt-12">
+                <MapWrapper />
+              </div>
             </div>
 
             {/* Contact form */}
@@ -204,7 +210,7 @@ const ContactMe = () => {
                 <div className="sm:col-span-2 sm:flex sm:justify-end">
                   <button
                     type="submit"
-                    className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-violet-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 sm:w-auto"
+                    className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-violet-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-violet-700 sm:w-auto"
                   >
                     Submit
                   </button>
